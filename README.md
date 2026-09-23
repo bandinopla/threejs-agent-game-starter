@@ -1,3 +1,4 @@
+![cover](cover.png)
 # Three.js Agent Game Starter
 
 Three.js Agent Game Starter is an agent-ready boilerplate for building a third-person action mini/casual game with Three.js. It includes the playable example game [**Gnome vs Noisy Apes**](https://gnome-vs-noisy-apes.web.app/), where you control a gnome with the keyboard and mouse, explore a 3D level, and shoot enemy monkeys that navigate with asynchronous A* pathfinding.
