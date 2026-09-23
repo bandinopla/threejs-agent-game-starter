@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Character"
+  short_description: "Scaffold and integrate a game character"
+  default_prompt: "Use $add-character to scaffold and integrate a new character into the game."

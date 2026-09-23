@@ -1,0 +1,12 @@
+*.glb filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+3d/**/*.png filter=lfs diff=lfs merge=lfs -text
+3d/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+3d/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+3d/**/*.webp filter=lfs diff=lfs merge=lfs -text
+3d/**/*.tga filter=lfs diff=lfs merge=lfs -text
+3d/**/*.tif filter=lfs diff=lfs merge=lfs -text
+3d/**/*.tiff filter=lfs diff=lfs merge=lfs -text
+3d/**/*.exr filter=lfs diff=lfs merge=lfs -text
+3d/**/*.hdr filter=lfs diff=lfs merge=lfs -text
+audio/**/*.mp3 filter=lfs diff=lfs merge=lfs -text

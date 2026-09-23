@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dry Run"
+  short_description: "Plan repository changes without modifying files"
+  default_prompt: "Use $dry-run to investigate and plan this task without changing repository state."

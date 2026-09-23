@@ -1,0 +1,11 @@
+import { __CLASS_NAME__BaseState } from "./__CLASS_NAME__BaseState";
+
+export class __CLASS_NAME__IdleState extends __CLASS_NAME__BaseState {
+	enter(): void {
+		this.context.animation.gotoAndPlay("idle");
+	}
+
+	update(_delta: number): void {}
+
+	exit(): void {}
+}

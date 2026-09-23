@@ -1,0 +1,41 @@
+{
+  "name": "threejs-agent-game-starter",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build2": "tsc && vite build",
+    "preview": "vite preview",
+    "sounds": "node build-sounds.cjs ./audio ./public ./src/sounds/atlas.ts",
+    "character:new": "tsx skills/add-character/scripts/scaffold-character.ts",
+    "deploy": "firebase deploy --only hosting",
+    "deploy:preview": "firebase hosting:channel:deploy game-preview"
+  },
+  "devDependencies": {
+    "@gltf-transform/cli": "^4.3.0",
+    "@gltf-transform/core": "^4.3.0",
+    "@gltf-transform/extensions": "^4.3.0",
+    "@gltf-transform/functions": "^4.3.0",
+    "@types/node": "^26.6.2",
+    "draco3dgltf": "^1.5.7",
+    "meshoptimizer": "^1.1.1",
+    "sharp": "^0.34.5",
+    "terser": "^5.47.1",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.4",
+    "vite-plugin-wasm": "^3.6.0"
+  },
+  "dependencies": {
+    "@dimforge/rapier3d": "^0.19.3",
+    "@google/genai": "^1.49.0",
+    "@types/three": "^0.184.0",
+    "n8ao-webgpu": "^0.1.0",
+    "ollama": "^0.6.3",
+    "three": "^0.184.0",
+    "troika-three-text": "^0.52.4",
+    "zod": "^4.3.6"
+  }
+}

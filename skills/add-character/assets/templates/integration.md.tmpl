@@ -1,0 +1,35 @@
+# __CLASS_NAME__ integration
+
+This record separates generated code from game and Blender integration that still requires project-specific decisions.
+
+## Decisions
+
+- Role: `__ROLE__`
+- Character family: `__FAMILY__`
+- State machine: `__STATE_MACHINE__`
+- Spawn strategy: `__SPAWN__`
+- Spawn ID: `__SPAWN_ID__`
+- Spawn event: `__EVENT_NAME__`
+- Asset status: `__ASSET__`
+- Asset path: `__ASSET_PATH__`
+
+## Code integration
+
+- [ ] Load and clone the rig safely for every instance.
+- [ ] Map the actual animation names; the generated idle state assumes an `idle` clip.
+- [ ] Register the character with its parent scene or manager.
+- [ ] Register and unregister per-frame updates if required.
+- [ ] Connect physics after construction if required.
+- [ ] Implement the selected spawn strategy in game assembly or an owning manager.
+- [ ] Implement reset, removal, pooling, and disposal behavior as applicable.
+- [ ] Verify role-specific contracts such as camera/input or enemy counters.
+
+## Blender and asset integration
+
+- [ ] Create or confirm the rigged GLB and export pipeline.
+- [ ] Confirm scale, forward direction, rig-root name, and clip names.
+- [ ] Add and export the chosen `userData.spawn` marker when using a level spawn.
+- [ ] Author hitboxes and ragdoll guides when using the shootable family.
+- [ ] Replace this checklist's pending values with the final asset contract.
+
+Remove completed TODO comments from source after this checklist is complete.

@@ -1,0 +1,31 @@
+import type { Object3D } from "three";
+import type { ColliderHandler } from "../../physics/types";
+import { RiggedShootableEntity, type RigAnimationClips } from "../RiggedEntity";
+import { StateMachine } from "../../statemachine/StateMachine";
+import { __CLASS_NAME__IdleState } from "./state/__CLASS_NAME__IdleState";
+import type { I__CLASS_NAME__State, __CLASS_NAME__StateName } from "./state/I__CLASS_NAME__State";
+import type { __CLASS_NAME__Context } from "./state/__CLASS_NAME__Context";
+
+/** Asset, hitbox, ragdoll, and spawn work is tracked in docs/character-integrations/__FILE_STEM__.md. */
+export class __CLASS_NAME__ extends RiggedShootableEntity {
+	readonly context: __CLASS_NAME__Context;
+	readonly states: StateMachine<__CLASS_NAME__Context, __CLASS_NAME__StateName, I__CLASS_NAME__State>;
+
+	constructor(rig: Object3D, clips: RigAnimationClips, hitboxTemplate: Object3D) {
+		super(rig, clips, hitboxTemplate);
+		this.context = { entity: this, animation: this.animation };
+		this.states = new StateMachine(this.context, {
+			idle: new __CLASS_NAME__IdleState(),
+		});
+		this.states.enterState("idle");
+	}
+
+	protected override createPhysicsWrappers(): ColliderHandler[] {
+		return [this.physicsScene!.createRagdoll(this)];
+	}
+
+	override update(delta: number): void {
+		super.update(delta);
+		if (!this.isRagdoll) this.states.update(delta);
+	}
+}

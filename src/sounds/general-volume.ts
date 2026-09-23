@@ -1,0 +1,1 @@
+export const GENERAL_VOLUME = 0.1;

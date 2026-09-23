@@ -1,0 +1,14 @@
+import type { Object3D } from "three";
+import type { ColliderHandler } from "../../physics/types";
+import { RiggedShootableEntity, type RigAnimationClips } from "../RiggedEntity";
+
+/** Asset, hitbox, ragdoll, and spawn work is tracked in docs/character-integrations/__FILE_STEM__.md. */
+export class __CLASS_NAME__ extends RiggedShootableEntity {
+	constructor(rig: Object3D, clips: RigAnimationClips, hitboxTemplate: Object3D) {
+		super(rig, clips, hitboxTemplate);
+	}
+
+	protected override createPhysicsWrappers(): ColliderHandler[] {
+		return [this.physicsScene!.createRagdoll(this)];
+	}
+}

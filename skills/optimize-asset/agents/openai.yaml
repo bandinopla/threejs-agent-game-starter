@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize 3D Asset"
+  short_description: "Pack exported GLBs for the game runtime"
+  default_prompt: "Use $optimize-asset to optimize an exported GLB and make it available to the game."

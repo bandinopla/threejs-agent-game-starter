@@ -1,0 +1,11 @@
+import type { __CLASS_NAME__Context } from "./__CLASS_NAME__Context";
+import type { I__CLASS_NAME__State, __CLASS_NAME__StateName } from "./I__CLASS_NAME__State";
+
+export abstract class __CLASS_NAME__BaseState implements I__CLASS_NAME__State {
+	context!: __CLASS_NAME__Context;
+	enterState!: (state: I__CLASS_NAME__State | __CLASS_NAME__StateName) => void;
+
+	abstract enter(): void;
+	abstract update(delta: number): void;
+	abstract exit(): void;
+}
